@@ -1,0 +1,51 @@
+git config --global user.name "Your Name"  //创建用户  非登录用户
+git config --global user.email "Your Email"  //创建邮箱
+
+仓库名tuoke   分支名hcg_work
+
+git remote -v  //查看当前连接远程仓库名称
+git remote remove 仓库名字  //删除仓库
+git remote add 自己取名字   url
+
+$ git add +文件名.文件类型 ，将某个文件加到缓存区
+$ git add +文件名.文件类型 ... 文件名.文件类型 ，将n个文件添加到缓存区
+$ git add xx文件夹/*.html，将xx文件夹下的所有的html文件添加到缓存区。
+$ git add *hhh ，将以hhh结尾的文件的所有修改添加到暂存区
+$ git add Hello* ，将所有以Hello开头的文件的修改添加到暂存区
+git add -u ，提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)
+git add .，提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
+…
+git add -A，提交所有变化。git add前几条都可以记不住，这个必须记住！！！
+
+
+
+git fetch //更新远程仓库
+git commit -m "修改注释
+
+git push -u 仓库名称 分支    //只需要第一次创建新分支时加入，后面无需加入
+
+git log //查看修改 
+
+git commit --amend  -m '修改的内容'     //修改注释
+
+git clone <git代码仓库的地址>  //拉取仓库代码
+
+git checkout -b <新分支名>  //在仓库里创建分支
+
+git checkout  分支名 //切换分支
+
+git push origin（远程仓库名字） main（分支名）//上传文件
+
+git clone url   //将远程仓库里的整个文件拉取下来  
+
+git branch -r //查看远程仓库所有分支
+
+git pull origin hcg_work  //将远程仓库的分支文件同步到本地
+
+git rm --cached 充值界面*  //撤销删除放在缓存区里的文件
+
+git push tuoke --delete hcg_work  //删除远程仓库里的指定分支
+
+删除指定的commit
+先用git log查看
+然后git revert abcdef1234567890abcdef1234567890abcdef1  删除指定的commit
